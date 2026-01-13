@@ -236,7 +236,7 @@ function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
-    <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
+    <section ref={ref} className="relative -z-[1] min-h-[100vh] flex items-center justify-center overflow-hidden pt-20 md:pt-0">
       <div className="gradient-bg" />
       <div className="noise-overlay" />
       
@@ -316,7 +316,7 @@ function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2 }}
-          className="absolute -bottom-[40px] left-1/2 -translate-x-1/2 hidden sm:block"
+          className="absolute -bottom-[100px]  left-[51%] -translate-x-1/2 hidden sm:block"
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
@@ -333,14 +333,14 @@ function Hero() {
 
 // Marquee section
 function Marquee() {
-  const skills = ["React", "Next.js", "TypeScript", "Three.js", "GSAP", "Tailwind", "Node.js", "Figma"];
+  const skills = ["React", "Next.js", "TypeScript", "React Native", "Tailwind", "Node.js", "AWS", "Figma"];
   
   return (
-    <div className="py-6 sm:py-8 md:py-12 border-y border-white/5 overflow-hidden bg-[#080808]">
+    <div className="py-6 sm:py-8 md:py-12 border-y border-white/5 overflow-hidden  relative z-10">
       <div className="marquee flex whitespace-nowrap">
         {[...skills, ...skills].map((skill, i) => (
-          <span key={i} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white/5 mx-4 sm:mx-6 md:mx-8">
-            {skill} <span className="text-[#00ff88]">✦</span>
+          <span key={i} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mx-4 sm:mx-6 md:mx-8">
+            {skill} <span className="text-[#00ff88]"> ✦</span>
           </span>
         ))}
       </div>
