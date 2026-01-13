@@ -242,7 +242,7 @@ function Hero() {
       
       {/* Floating shapes - smaller on mobile */}
       <motion.div
-        className="absolute top-1/4 left-1/4 w-32 md:w-64 h-32 md:h-64 rounded-full bg-[#00ff88]/5 blur-3xl"
+        className="absolute top-1/4 left-1/4 w-32 md:w-64 h-32 md:h-64 rounded-full bg-[#00ff88]/20 blur-3xl"
         animate={{
           scale: [1, 1.2, 1],
           x: [0, 50, 0],
@@ -251,7 +251,7 @@ function Hero() {
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-1/3 right-1/4 w-48 md:w-96 h-48 md:h-96 rounded-full bg-[#ff3366]/5 blur-3xl"
+        className="absolute bottom-1/3 right-1/4 w-48 md:w-96 h-48 md:h-96 rounded-full bg-[#ff3366]/20 blur-3xl"
         animate={{
           scale: [1.2, 1, 1.2],
           x: [0, -50, 0],
@@ -333,7 +333,7 @@ function Hero() {
 
 // Marquee section
 function Marquee() {
-  const skills = ["React", "Next.js", "TypeScript", "React Native", "Tailwind", "Node.js", "AWS", "Figma"];
+  const skills = ["React", "Next.js", "JavaScript", "TypeScript", "React Native", "Tailwind", "Node.js", "AWS", "Figma"];
   
   return (
     <div className="py-6 sm:py-8 md:py-12 border-y border-white/5 overflow-hidden  relative z-10">
