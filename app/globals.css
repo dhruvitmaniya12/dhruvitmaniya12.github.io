@@ -344,3 +344,87 @@ section {
     linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   background-size: 60px 60px;
 }
+
+/* Mobile-specific styles */
+@media (max-width: 640px) {
+  .magnetic-btn {
+    padding: 12px 28px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .animated-border::before {
+    border-radius: 12px;
+  }
+
+  .animated-border {
+    border-radius: 12px;
+  }
+
+  .marquee {
+    animation: marquee 20s linear infinite;
+  }
+
+  .skill-pill {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 641px) and (max-width: 768px) {
+  .magnetic-btn {
+    padding: 14px 32px;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .project-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .project-card:active {
+    transform: scale(0.98);
+  }
+
+  .magnetic-btn:hover::before {
+    transform: translateX(-100%);
+  }
+
+  .magnetic-btn:active::before {
+    transform: translateX(0);
+  }
+
+  .line-animation:hover::after {
+    transform: translateX(-100%);
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    animation: none;
+  }
+
+  .floating {
+    animation: none;
+  }
+
+  .pulse-glow {
+    animation: none;
+  }
+}
+
+/* Safe area insets for iOS */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+}
