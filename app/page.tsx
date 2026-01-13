@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform, useInView, AnimatePresence } from "framer-motion";
+import { Code2, Server, Shield, Cloud, Puzzle, Github, Linkedin } from "lucide-react";
 // Custom cursor component
 function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -402,20 +403,14 @@ function About() {
               <div className="absolute inset-0 grid-pattern" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <motion.div
-                  className="w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48"
-                  animate={{ scale: [1, 1.05, 1] }}
+                  className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-[#1a1a2e] rounded-2xl flex items-center justify-center shadow-2xl"
+                  animate={{ scale: [1, 1.03, 1] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                    <path d="M7 8L3 12L7 16" stroke="url(#codeGradient)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M17 8L21 12L17 16" stroke="url(#codeGradient)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M14 4L10 20" stroke="url(#codeGradient)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <defs>
-                      <linearGradient id="codeGradient" x1="3" y1="4" x2="21" y2="20" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#00ff88"/>
-                        <stop offset="1" stopColor="#ff3366"/>
-                      </linearGradient>
-                    </defs>
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20">
+                    <path d="M8 7L3 12L8 17" stroke="#a78bfa" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M16 7L21 12L16 17" stroke="#a78bfa" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M14 4L10 20" stroke="#c4b5fd" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </motion.div>
               </div>
@@ -602,31 +597,31 @@ function Skills() {
   const skillCategories = [
     {
       title: "Frontend",
-      icon: "🎨",
+      icon: Code2,
       color: "#00ff88",
       skills: ["React Native", "React", "Next.js", "Redux", "TypeScript", "JavaScript", "Tailwind CSS"],
     },
     {
       title: "Backend",
-      icon: "⚡",
-      color: "#ff3366",
-      skills: ["Node.js", "Python", "Spring Boot", "Firebase", "PostgreSQL", "MongoDB", "REST APIs"],
+      icon: Server,
+      color: "#6366f1",
+      skills: ["Node.js", "Spring Boot", "Firebase", "PostgreSQL", "MongoDB", "REST APIs"],
     },
     {
       title: "Cloud & DevOps",
-      icon: "☁️",
+      icon: Cloud,
       color: "#00c3ff",
-      skills: ["AWS (EC2, RDS, S3)", "Docker", "CI/CD", "Git", "Vercel"],
+      skills: ["AWS (EC2, RDS, S3)", "Docker", "CI/CD", "Git"],
     },
     {
       title: "Security",
-      icon: "🔐",
+      icon: Shield,
       color: "#9b59b6",
-      skills: ["Auth/Session Tokens", "PKCE", "SSL Pinning", "Encryption", "Nonce Validation"],
+      skills: ["Auth/Session Tokens", "SSL Pinning", "Encryption", "Nonce Validation"],
     },
     {
       title: "Integrations",
-      icon: "🔗",
+      icon: Puzzle,
       color: "#ff9500",
       skills: ["Stripe", "Razorpay", "PayGol", "RevenueCat", "Google Maps", "Mapbox"],
     },
@@ -702,19 +697,14 @@ function Skills() {
               
               <div className="relative animated-border p-4 sm:p-6 md:p-8 h-full backdrop-blur-sm">
                 {/* Floating icon */}
+                
                 <motion.div
-                  className="text-4xl sm:text-5xl mb-4 sm:mb-6"
-                  animate={{ 
-                    y: [0, -8, 0],
-                    rotate: [0, 5, -5, 0]
-                  }}
-                  transition={{ 
-                    duration: 4,
-                    repeat: Infinity,
-                    delay: catIndex * 0.3
-                  }}
+                  // className="text-4xl sm:text-5xl mb-4 sm:mb-6"
+                  className="mb-4 sm:mb-4 rounded-lg bg-secondary/10 group-hover:bg-secondary/20 transition-colors"
+                 
                 >
-                  {category.icon}
+                  <category.icon className="w-10 h-10 text-secondary" color={category.color} />
+                  {/* {category.icon} */}
                 </motion.div>
 
                 {/* Category title with animated underline */}
@@ -793,8 +783,8 @@ function Contact() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const socialLinks = [
-    { name: "GitHub", url: "https://github.com/dhruvitmaniya12", icon: "GH" },
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/dhruvitmaniya1/", icon: "LI" },
+    { name: "GitHub", url: "https://github.com/dhruvitmaniya12", icon: Github },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/dhruvitmaniya1/", icon: Linkedin },
 
 
   ];
@@ -845,7 +835,7 @@ function Contact() {
                 whileHover={{ scale: 1.1, y: -5 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {link.icon}
+                <link.icon className="w-6 h-6 text-secondary" />
               </motion.a>
             ))}
           </div>

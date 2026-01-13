@@ -9,9 +9,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "John Doe | Creative Developer",
-  description: "Creative developer crafting immersive digital experiences with cutting-edge technology and design.",
-  keywords: ["developer", "portfolio", "web development", "creative", "design"],
+  title: "Dhruvit Maniya | Sr. Software Engineer",
+  description: "Sr. Software Engineer at Growder, crafting immersive digital experiences with cutting-edge technology and design.",
+  keywords: ["developer", "portfolio", "web development", "creative", "design", "Growder", "Inpackaging", "MoodMe", "VRSist", "Software Engineer"],
 };
 
 export default function RootLayout({
