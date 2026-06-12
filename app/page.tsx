@@ -284,7 +284,7 @@ function Hero() {
           transition={{ delay: 1.4 }}
           className="text-base sm:text-lg md:text-xl text-[#e1e1e1] max-w-2xl mx-auto mb-8 sm:mb-12 leading-relaxed px-2"
         >
-          I design and build scalable web and mobile products using <b className="text-[#00ff88]">React</b>, <b className="text-[#00ff88]">React Native</b>, and <b className="text-[#00ff88]">Node.js</b>, engineered for performance, clean architecture, and real-world reliability.
+          I design and build scalable web and mobile products using <b className="text-[#00ff88]">React</b> and <b className="text-[#00ff88]">React Native</b>, engineered for performance, clean architecture, and real-world reliability.
         </motion.p>
 
         <motion.div
@@ -333,7 +333,7 @@ function Hero() {
 
 // Marquee section
 function Marquee() {
-  const skills = ["React", "Next.js", "JavaScript", "TypeScript", "React Native", "Tailwind", "Node.js", "AWS", "Figma"];
+  const skills = ["React", "Next.js", "JavaScript", "TypeScript", "React Native", "Tailwind", "AWS", "Figma"];
   
   return (
     <div className="py-6 sm:py-8 md:py-12 border-y border-white/5 overflow-hidden  relative z-10">
@@ -368,7 +368,7 @@ function About() {
           </h2>
           <div className="space-y-4 sm:space-y-6 text-[#e1e1e1] text-base sm:text-lg leading-relaxed">
             <p>
-            I help startups and businesses turn ideas into scalable, production-ready web and mobile applications. With <b className="text-[#00ff88]">5+ years</b> of experience, I specialize in <b className="text-[#00ff88]">React, React Native, and Node.js</b>, delivering reliable, high-performance solutions that are built to scale.
+            I help startups and businesses turn ideas into scalable, production-ready web and mobile applications. With <b className="text-[#00ff88]">5+ years</b> of experience, I specialize in <b className="text-[#00ff88]">React and React Native</b>, delivering reliable, high-performance solutions that are built to scale.
             </p>
             <p>
             I’ve partnered with clients across industries to build <b className="text-[#00ff88]">B2B platforms</b>, <b className="text-[#00ff88]">consumer apps</b>, and custom tools, including applications with <b className="text-[#00ff88]">millions of users</b>, complex integrations, and cloud-optimized infrastructure. My approach is simple: clean architecture, fast execution, and long-term reliability.
@@ -605,7 +605,7 @@ function Skills() {
       title: "Backend",
       icon: Server,
       color: "#6366f1",
-      skills: ["Node.js", "Spring Boot", "Firebase", "PostgreSQL", "MongoDB", "REST APIs"],
+      skills: ["Spring Boot", "Firebase", "PostgreSQL", "MongoDB", "REST APIs"],
     },
     {
       title: "Cloud & DevOps",
